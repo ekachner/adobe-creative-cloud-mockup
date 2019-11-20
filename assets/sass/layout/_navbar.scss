@@ -1,7 +1,10 @@
 // NAVBAR
 
 nav {
+
     #topNav {
+        @include basic-flex(space-between);
+
         height: 60px;
         width:  100vw;
         background-color: #000;
@@ -14,11 +17,15 @@ nav {
         }
 
         ul {
+            @include basic-flex();
+
             height: 100%;
             width:  auto;
             background-color: #444;
 
             li{
+                @include basic-flex();
+
                 height:  100%;
                 width:   auto;
                 padding: 0px 20px;
@@ -27,6 +34,8 @@ nav {
         }
 
         #accountInfo {
+            @include basic-flex();
+
             height: 100%;
             width:  auto;
             background-color: #888;
