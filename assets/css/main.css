@@ -78,13 +78,13 @@ nav #topNav ul li {
   background-color: #666;
 }
 
-nav #topNav ul #accountInfo {
+nav #topNav #accountInfo {
   height: 100%;
   width: auto;
   background-color: #888;
 }
 
-nav #topNav ul #accountInfo div {
+nav #topNav #accountInfo div {
   height: 20px;
   width: 20px;
   padding: 10px;
