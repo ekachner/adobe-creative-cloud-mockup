@@ -55,11 +55,15 @@ nav {
         background-color: #ccc;
 
         ul {
+            @include basic-flex();
+
             height: 100%;
             width:  auto;
             background-color: #eee;
 
             li {
+                @include basic-flex();
+
                 height: 100%;
                 width:  auto;
                 padding: 0 20px; 
