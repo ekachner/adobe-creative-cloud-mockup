@@ -142,4 +142,24 @@ nav #topNav #accountInfo div {
   padding: 10px;
   background-color: #aaa;
 }
+
+nav #bottomNav {
+  height: 80px;
+  width: 100vw;
+  background-color: #ccc;
+}
+
+nav #bottomNav ul {
+  height: 100%;
+  width: auto;
+  background-color: #eee;
+}
+
+nav #bottomNav ul li {
+  height: 100%;
+  width: auto;
+  padding: 0 20px;
+  background-color: #111;
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
