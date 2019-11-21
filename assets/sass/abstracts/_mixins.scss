@@ -16,4 +16,10 @@
     font-size: $fs;
     font-weight: 500;
     border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: #005ABE;
+        transition: 0.3s;
+    }
 }
+

@@ -68,21 +68,33 @@ nav #topNav {
           flex-direction: row;
   height: 60px;
   width: 100vw;
-  background-color: #000;
+  background-color: #fff;
 }
 
-nav #topNav #adobeLogo {
+nav #topNav .adobeLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 100%;
-  width: 74px;
+  width: auto;
   padding: 0 20px;
-  background-color: #222;
+  background-color: #fff;
   font-size: 16px;
 }
 
-nav #topNav #adobeLogo::before {
-  height: 25px;
-  width: 33px;
-  content: "";
+nav #topNav .adobeLogo span {
+  margin-left: 10px;
+  font-size: 15px;
 }
 
 nav #topNav ul {
@@ -101,7 +113,6 @@ nav #topNav ul {
           flex-direction: row;
   height: 100%;
   width: auto;
-  background-color: #444;
 }
 
 nav #topNav ul li {
@@ -121,8 +132,15 @@ nav #topNav ul li {
   height: 100%;
   width: auto;
   padding: 0px 20px;
-  background-color: #666;
+  background-color: #fff;
   font-size: 14px;
+}
+
+nav #topNav ul li:hover {
+  cursor: pointer;
+  background-color: #f4f4f4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav #topNav #accountInfo {
@@ -141,14 +159,39 @@ nav #topNav #accountInfo {
           flex-direction: row;
   height: 100%;
   width: auto;
-  background-color: #888;
+  background-color: #fff;
+  margin: 0 20px;
+}
+
+nav #topNav #accountInfo span {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+nav #topNav #accountInfo span:hover {
+  cursor: pointer;
+  color: #2B9AF3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav #topNav #accountInfo div {
   height: 20px;
   width: 20px;
   padding: 10px;
-  background-color: #aaa;
+  background-color: #fff;
+}
+
+nav #topNav #accountInfo div svg {
+  fill: #6b6b6b;
+}
+
+nav #topNav #accountInfo div svg:hover {
+  cursor: pointer;
+  fill: #2B9AF3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav #bottomNav {
@@ -169,7 +212,7 @@ nav #bottomNav {
   z-index: 10;
   height: 80px;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav #bottomNav ul {
@@ -207,10 +250,16 @@ nav #bottomNav ul li {
   height: 100%;
   width: auto;
   padding: 0 20px;
-  background-color: #111;
   color: white;
   font-family: 'Lato', sans-serif;
   font-size: 13px;
+}
+
+nav #bottomNav ul li:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav #bottomNav ul li:first-child {
@@ -220,8 +269,9 @@ nav #bottomNav ul li:first-child {
 }
 
 nav #bottomNav ul li:first-child::before {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 33px;
+  content: url("/assets/imgs/creativeCloudIcon.svg");
   margin-right: 15px;
 }
 
@@ -234,6 +284,13 @@ nav #bottomNav ul button {
   font-size: 14px;
   font-weight: 500;
   border: none;
+}
+
+nav #bottomNav ul button:hover {
+  cursor: pointer;
+  background-color: #005ABE;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #homeHero {
@@ -259,6 +316,15 @@ nav #bottomNav ul button {
   background-color: #333;
 }
 
+#homeHero video {
+  height: auto;
+  width: 100%;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #homeHero #homeHeroContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,8 +340,12 @@ nav #bottomNav ul button {
       -ms-flex-direction: column;
           flex-direction: column;
   height: auto;
-  width: 60vw;
-  background-color: #555;
+  width: 50vw;
+  z-index: 10;
+  position: relative;
+  color: white;
+  padding-top: 173px;
+  padding-bottom: 74px;
 }
 
 #homeHero #homeHeroContent img {
@@ -287,6 +357,16 @@ nav #bottomNav ul button {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 900;
   font-size: 45px;
+  margin-top: 28px;
+  line-height: 1.3;
+}
+
+#homeHero #homeHeroContent h2 {
+  width: 760px;
+  margin-bottom: 40px;
+  font-size: 19px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 #homeHero #homeHeroContent button {
@@ -298,6 +378,13 @@ nav #bottomNav ul button {
   font-size: 15px;
   font-weight: 500;
   border: none;
+}
+
+#homeHero #homeHeroContent button:hover {
+  cursor: pointer;
+  background-color: #005ABE;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 body {

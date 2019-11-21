@@ -9,18 +9,21 @@ nav {
         width:  100vw;
         background-color: #fff;
 
-        #adobeLogo {
+        .adobeLogo {
+            @include basic-flex();
+
             height:  100%;
-            width:   74px;
+            width:   auto;
             padding: 0 20px;
-            background-color: #222;
+            background-color: #fff;
             font-size: 16px;
-            
-            &::before{
-                height: 25px;
-                width: 33px;
-                content: "";
+
+            span {
+                margin-left: 10px;
+                font-size: 15px;
             }
+
+ 
         }
 
         ul {
@@ -35,8 +38,13 @@ nav {
                 height:  100%;
                 width:   auto;
                 padding: 0px 20px;
-                background-color: #666;
+                background-color: #fff;
                 font-size: 14px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #f4f4f4;
+                    transition: 0.3s;
+                }
             }
         }
 
@@ -45,13 +53,34 @@ nav {
 
             height: 100%;
             width:  auto;
-            background-color: #888;
+            background-color: #fff;
+            margin: 0 20px;
+
+            span{
+                margin-left: 12px;
+                font-size: 14px;
+                color: #6b6b6b;
+                &:hover {
+                    cursor: pointer;
+                    color: #2B9AF3;
+                    transition: 0.3s;
+                }
+            }
 
             div{
                 height:  20px;
                 width:   20px;
                 padding: 10px;
-                background-color: #aaa;
+                background-color: #fff;
+
+                svg{
+                    fill: #6b6b6b;
+                    &:hover {
+                        cursor: pointer;
+                        fill: #2B9AF3;
+                        transition: 0.3s;
+                    }
+                }
             }
         }
     } //topNav
@@ -64,7 +93,7 @@ nav {
 
         height: $bottomNavHeight;  //80px
         width:  100vw;
-        background-color: rgba(0,0,0,.5);
+        background-color: rgba(0,0,0,.6);
 
         ul {
             @include basic-flex();
@@ -81,16 +110,15 @@ nav {
                 width:  auto;
                 padding: 0 20px; 
 
-                background-color: #111;
                 color: white;
                 font-family: 'Lato', sans-serif;
                 font-size: 13px;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: rgba(44, 44, 44, 0.7);
+                    background-color: rgba(255, 255, 255, 0.1);
                     transition: 0.3s;
-                
+                }
 
                 &:first-child{
                     text-transform: uppercase;
@@ -98,9 +126,9 @@ nav {
                     font-size: 12px;
 
                     &::before{    //pseudo element
-                        height: 50px;
-                        width: 50px;
-                        content: " "; //img src="assets/imgs/adobe-icon-png-57.png";   //three pieces needed for pseudo elements. height/width/content
+                        height: 25px;
+                        width: 33px;
+                        content: url("/assets/imgs/creativeCloudIcon.svg");   //three pieces needed for pseudo elements. height/width/content (content:" ";)
                         margin-right: 15px;
                     }
                 }
@@ -111,4 +139,4 @@ nav {
             }
         } //ul
     } //bottomNav
-} //nav
+} 
