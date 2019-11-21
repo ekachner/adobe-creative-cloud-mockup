@@ -7,13 +7,23 @@ nav {
 
         height: 60px;
         width:  100vw;
-        background-color: #000;
+        background-color: #fff;
 
-        #adobeLogo {
+        .adobeLogo {
+            @include basic-flex();
+
             height:  100%;
-            width:   74px;
+            width:   auto;
             padding: 0 20px;
-            background-color: #222;
+            background-color: #fff;
+            font-size: 16px;
+
+            span {
+                margin-left: 10px;
+                font-size: 15px;
+            }
+
+ 
         }
 
         ul {
@@ -21,7 +31,6 @@ nav {
 
             height: 100%;
             width:  auto;
-            background-color: #444;
 
             li{
                 @include basic-flex();
@@ -29,7 +38,13 @@ nav {
                 height:  100%;
                 width:   auto;
                 padding: 0px 20px;
-                background-color: #666;
+                background-color: #fff;
+                font-size: 14px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #f4f4f4;
+                    transition: 0.3s;
+                }
             }
         }
 
@@ -38,28 +53,55 @@ nav {
 
             height: 100%;
             width:  auto;
-            background-color: #888;
+            background-color: #fff;
+            margin: 0 20px;
+
+            span{
+                margin-left: 12px;
+                font-size: 14px;
+                color: #6b6b6b;
+                &:hover {
+                    cursor: pointer;
+                    color: #2B9AF3;
+                    transition: 0.3s;
+                }
+            }
 
             div{
                 height:  20px;
                 width:   20px;
                 padding: 10px;
-                background-color: #aaa;
+                background-color: #fff;
+
+                svg{
+                    fill: #6b6b6b;
+                    &:hover {
+                        cursor: pointer;
+                        fill: #2B9AF3;
+                        transition: 0.3s;
+                    }
+                }
             }
         }
     } //topNav
 
     #bottomNav {
-        height: 80px;
+        @include basic-flex();
+
+        position: relative;  //to get home hero to be visible under the bottom navbar. Must also go and do in the home hero.
+        z-index: 10;  //increments of 5. Greater value than home hero = 5
+
+        height: $bottomNavHeight;  //80px
         width:  100vw;
-        background-color: #ccc;
+        background-color: rgba(0,0,0,.6);
 
         ul {
             @include basic-flex();
 
             height: 100%;
             width:  auto;
-            background-color: #eee;
+            //background-color: #eee;
+            
 
             li {
                 @include basic-flex();
@@ -67,9 +109,34 @@ nav {
                 height: 100%;
                 width:  auto;
                 padding: 0 20px; 
-                background-color: #111;
+
                 color: white;
+                font-family: 'Lato', sans-serif;
+                font-size: 13px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transition: 0.3s;
+                }
+
+                &:first-child{
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 12px;
+
+                    &::before{    //pseudo element
+                        height: 25px;
+                        width: 33px;
+                        content: url("/assets/imgs/creativeCloudIcon.svg");   //three pieces needed for pseudo elements. height/width/content (content:" ";)
+                        margin-right: 15px;
+                    }
+                }
+            } //li
+
+            button {
+                @include button();
             }
         } //ul
     } //bottomNav
-} //nav
+} 

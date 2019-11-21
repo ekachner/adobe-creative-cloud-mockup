@@ -6,3 +6,20 @@
     align-items: $ai;
     flex-direction: $fd;
 }
+
+@mixin button($wh: 0px 12px, $fs: 14px,){
+    padding: $wh;
+    line-height: 32px;
+    background-color: #1473E6;
+    color: white;
+    border-radius: 16px;
+    font-size: $fs;
+    font-weight: 500;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: #005ABE;
+        transition: 0.3s;
+    }
+}
+

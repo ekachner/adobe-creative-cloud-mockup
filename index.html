@@ -12,13 +12,20 @@
         <!--JAVASCRIPT-->
         <script src="assets/js/main.js"></script>
 
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet">
 
     </head>
     <body>
         <nav>
             <div id="topNav">
 
-                <div id="adobeLogo"></div>
+                <!--Left Navigation-->
+                <div class="adobeLogo">
+                     <svg class="adobeLogoImage" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 24 20" focusable="false"><path fill="#FF0000" d="M15.1,0H24v20L15.1,0z M8.9,0H0v20L8.9,0z M12,7.4L17.6,20h-3.8l-1.6-4H8.1L12,7.4z"></path></svg>
+                     <span>Adobe</span>
+                </div>
 
                 <!--Middle Navigation-->
                 <ul>
@@ -29,29 +36,39 @@
                     <li>Support</li>
                 </ul>
 
+                <!--Right Navigation-->
                 <div id="accountInfo">
-                    <div></div>
-                    <div></div>
+                    <div class="magnifyingGlass">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" focusable="false">            
+                            <path d="M14 2A8 8 0 0 0 7.4 14.5L2.4 19.4a1.5 1.5 0 0 0 2.1 2.1L9.5 16.6A8 8 0 1 0 14 2Zm0 14.1A6.1 6.1 0 1 1 20.1 10 6.1 6.1 0 0 1 14 16.1Z"></path>         
+                        </svg>
+                    </div>
+                    <span>Sign In</span>
                 </div>
-            </div> <!--#topNav-->
+            </div> <!--#topNav END-->
+
             <div id="bottomNav">
                 <ul>
-                    <li>Adobe Creative Cloud</li>
+                    <li>Adobe Creative Cloud</li>  <!--Contains pseudo element-->
                     <li>Discover</li>
                     <li>Compare Plans</li>
                     <li>Learn & Support</li>
                     <button class="cta">Buy now</button>
                 </ul>
-            </div> <!--#bottomNav-->
+            </div> <!--#bottomNav END-->
         </nav>
 
         <main>
             <div id="homeHero">
+                <video playsinline autoplay muted loop>
+                    <source src="https://images-tv.adobe.com/mpcv3/1ba53fdb-7ce4-41b0-b442-080fc89a0b7f_1571953596.960x540at1200_h264.mp4" type="video/mp4">
+                </video>
+
                 <div id="homeHeroContent">
-                    <svg></svg>
-                    <h1>Creativity for all.</h1>
-                    <h2>Adobe Creative Cloud gives you the world’s best creative apps and services so you can make anything you can imagine, wherever you’re inspired.</h2>
-                    <button class="cta">Start your free trial</button>
+                    <img src="assets/imgs/creativeCloudIcon.svg"/>
+                    <h1>Black Friday. It's on. Get 40% off.</h1>
+                    <h2>Save on the next generation of Creative Cloud . New apps, new features, and new ways to create. Offer ends November 29.</h2>
+                    <button class="cta">Buy now</button>
                 </div> <!--#homeHeroContent-->
             </div> <!--#homeHero-->
         </main>

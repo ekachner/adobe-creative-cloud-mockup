@@ -3,22 +3,60 @@
 #homeHero {
     @include basic-flex();
 
+    position: relative;  //so it can be visible under the bottom navbar.
+    top: -$bottomNavHeight;  //(-80px)
+    z-index: 5;
+
     height: auto;
-    min-height: 60vh;  //70vh;
+    min-height: 70vh;  //70vh;
     width:  100vw;
     background-color: #333;
+    
+    video{
+        height: auto;
+        width: 100%;
+
+        z-index: -5;
+        position: absolute;
+        top: 0;   //these sets the video to the orgin instead of choosing its own starting location
+        left: 0;
+
+    }
 
     #homeHeroContent {
         @include basic-flex(center, center, column);
 
         height: auto;
-        width:  60vw;
-        background-color: #555;
+        width:  50vw;
+        z-index: 10;
+        position: relative;
+        color: white;
+        padding-top: 173px;
+        padding-bottom: 74px;
 
-        svg{
-            height: 100px;
-            width:  100px;
-            background-color: red;
+        img {
+            height: 84px;
+            width:  112px;
+        }
+
+        h1 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 900;
+            font-size:   45px;
+            margin-top: 28px; 
+            line-height: 1.3;
+        }
+
+        h2 {
+            width: 760px;
+            margin-bottom: 40px;
+            font-size: 19px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        button {
+            @include button(0px 20px, 15px);
         }
     } //#homeHeroContent
 } //#homeHero
