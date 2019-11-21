@@ -76,6 +76,13 @@ nav #topNav #adobeLogo {
   width: 74px;
   padding: 0 20px;
   background-color: #222;
+  font-size: 16px;
+}
+
+nav #topNav #adobeLogo::before {
+  height: 25px;
+  width: 33px;
+  content: "";
 }
 
 nav #topNav ul {
@@ -115,6 +122,7 @@ nav #topNav ul li {
   width: auto;
   padding: 0px 20px;
   background-color: #666;
+  font-size: 14px;
 }
 
 nav #topNav #accountInfo {
@@ -144,9 +152,24 @@ nav #topNav #accountInfo div {
 }
 
 nav #bottomNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  z-index: 10;
   height: 80px;
   width: 100vw;
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav #bottomNav ul {
@@ -165,7 +188,6 @@ nav #bottomNav ul {
           flex-direction: row;
   height: 100%;
   width: auto;
-  background-color: #eee;
 }
 
 nav #bottomNav ul li {
@@ -187,6 +209,31 @@ nav #bottomNav ul li {
   padding: 0 20px;
   background-color: #111;
   color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+}
+
+nav #bottomNav ul li:first-child {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+nav #bottomNav ul li:first-child::before {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+
+nav #bottomNav ul button {
+  padding: 0px 12px;
+  line-height: 32px;
+  background-color: #1473E6;
+  color: white;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
 }
 
 #homeHero {
@@ -203,8 +250,11 @@ nav #bottomNav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: relative;
+  top: -80px;
+  z-index: 5;
   height: auto;
-  min-height: 60vh;
+  min-height: 70vh;
   width: 100vw;
   background-color: #333;
 }
@@ -228,9 +278,33 @@ nav #bottomNav ul li {
   background-color: #555;
 }
 
-#homeHero #homeHeroContent svg {
-  height: 100px;
-  width: 100px;
-  background-color: red;
+#homeHero #homeHeroContent img {
+  height: 84px;
+  width: 112px;
+}
+
+#homeHero #homeHeroContent h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 45px;
+}
+
+#homeHero #homeHeroContent button {
+  padding: 0px 20px;
+  line-height: 32px;
+  background-color: #1473E6;
+  color: white;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+nav {
+  font-family: 'Lato', sans-serif;
 }
 /*# sourceMappingURL=main.css.map */

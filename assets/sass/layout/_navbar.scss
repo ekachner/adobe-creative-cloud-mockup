@@ -7,13 +7,20 @@ nav {
 
         height: 60px;
         width:  100vw;
-        background-color: #000;
+        background-color: #fff;
 
         #adobeLogo {
             height:  100%;
             width:   74px;
             padding: 0 20px;
             background-color: #222;
+            font-size: 16px;
+            
+            &::before{
+                height: 25px;
+                width: 33px;
+                content: "";
+            }
         }
 
         ul {
@@ -21,7 +28,6 @@ nav {
 
             height: 100%;
             width:  auto;
-            background-color: #444;
 
             li{
                 @include basic-flex();
@@ -30,6 +36,7 @@ nav {
                 width:   auto;
                 padding: 0px 20px;
                 background-color: #666;
+                font-size: 14px;
             }
         }
 
@@ -50,16 +57,22 @@ nav {
     } //topNav
 
     #bottomNav {
-        height: 80px;
+        @include basic-flex();
+
+        position: relative;  //to get home hero to be visible under the bottom navbar. Must also go and do in the home hero.
+        z-index: 10;  //increments of 5. Greater value than home hero = 5
+
+        height: $bottomNavHeight;  //80px
         width:  100vw;
-        background-color: #ccc;
+        background-color: rgba(0,0,0,.5);
 
         ul {
             @include basic-flex();
 
             height: 100%;
             width:  auto;
-            background-color: #eee;
+            //background-color: #eee;
+            
 
             li {
                 @include basic-flex();
@@ -67,8 +80,34 @@ nav {
                 height: 100%;
                 width:  auto;
                 padding: 0 20px; 
+
                 background-color: #111;
                 color: white;
+                font-family: 'Lato', sans-serif;
+                font-size: 13px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(44, 44, 44, 0.7);
+                    transition: 0.3s;
+                
+
+                &:first-child{
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 12px;
+
+                    &::before{    //pseudo element
+                        height: 50px;
+                        width: 50px;
+                        content: " "; //img src="assets/imgs/adobe-icon-png-57.png";   //three pieces needed for pseudo elements. height/width/content
+                        margin-right: 15px;
+                    }
+                }
+            } //li
+
+            button {
+                @include button();
             }
         } //ul
     } //bottomNav
